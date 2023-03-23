@@ -18,6 +18,7 @@ public class NextFr13 implements TemporalAdjuster {
 		do {
 			res = res.plus(1, ChronoUnit.MONTHS);
 		} while (((LocalDate) res).getDayOfWeek().toString() != "FRIDAY");
+		
 		return res;
 	}
 

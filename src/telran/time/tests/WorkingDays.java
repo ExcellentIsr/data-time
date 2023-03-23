@@ -23,6 +23,7 @@ public class WorkingDays implements TemporalAdjuster {
 				res.plus(1, ChronoUnit.DAYS);
 			} while (Arrays.asList(daysOff).contains(((LocalDate) res).getDayOfWeek()));
 		}
+		
 		return res;
 	}
 

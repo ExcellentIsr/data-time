@@ -18,7 +18,7 @@ public class WorkingDays implements TemporalAdjuster {
 	public Temporal adjustInto(Temporal temporal) {
 		Temporal res = temporal;
 
-		if (daysOff.length != 7) {
+		if (daysOff.length < DayOfWeek.values().length) {
 			do {
 				res.plus(1, ChronoUnit.DAYS);
 			} while (Arrays.asList(daysOff).contains(((LocalDate) res).getDayOfWeek()));

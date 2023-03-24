@@ -88,9 +88,9 @@ public class PrintCalendar {
 
 	private static int getFirstDay(int month, int year) {
 		int res = 0;
-		DayOfWeek l = LocalDate.of(year, month, 1).getDayOfWeek();
+		DayOfWeek firstDayMonth = LocalDate.of(year, month, 1).getDayOfWeek();
 		for (DayOfWeek dayOfWeek : daysWeek) {
-			if (l == dayOfWeek) {
+			if (firstDayMonth == dayOfWeek) {
 				res = (dayOfWeek.getValue() + 1);
 			}
 		}
